@@ -1,6 +1,6 @@
 <x-layout titulo="Listado de proyectos">
     @forelse ($proyectos as $id => $proyecto)
-        <li>{{ $proyecto['nombre'] }}</li>
+        <x-tarjeta-proyecto :proyecto="$proyecto" :id="$id" />
     @empty
         <li>Todavía no hay proyectos.</li>
     @endforelse
