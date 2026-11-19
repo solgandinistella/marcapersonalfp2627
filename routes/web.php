@@ -18,7 +18,7 @@ Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
         })->name('index');
 
     Route::get('show/{id}', function ($id) { 
-        return view('proyectos.show', ['id' => $id]); 
+        return view('proyectos.show', ['proyecto' => config('marcapersonalfp.proyectos')[$id] ?? null, 'id' => $id]); // El config lo hago así para solo pasarle 1 proyecto a la vista, y no el array completo
         })->name('show')->whereNumber('id');
 
     Route::get('create', function () { 
