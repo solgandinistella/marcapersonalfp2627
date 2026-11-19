@@ -31,7 +31,7 @@ Route::get('hola/{nombre?}', function ($nombre = 'mundo') {
 });
 
 Route::get('perfil/{id?}', function ($id = null){
-     return 'Visualizar el currículo ' . ($id ? 'de ' . $id : 'propio');
+     return view('perfil', ['id' => $id]);
  })->whereNumber('id')->name('perfil');
 
  Route::get('centro', function () {

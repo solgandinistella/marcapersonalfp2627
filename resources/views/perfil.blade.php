@@ -1,3 +1,3 @@
-<div>
-    <!-- Nothing worth having comes easy. - Theodore Roosevelt -->
-</div>
+<x-layout :titulo="'Visualizar el currículo ' . ($id ? 'de ' . $id : 'propio')">
+    
+</x-layout>
